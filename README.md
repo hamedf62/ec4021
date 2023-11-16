@@ -27,3 +27,6 @@ $ .venv\Scripts\activate.bat
 ## how to install packages
 
 > pip install requirements.txt
+
+// pip list
+// pip show <package>
