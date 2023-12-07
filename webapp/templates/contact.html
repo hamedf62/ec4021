@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{% block title %}Contact us{% endblock %}
+{% block head %}
+  {{ super() }}
+  <style type="text/css">
+    .important { color: #336699; }
+  </style>
+{% endblock %}
+{% block content %}
+  <h1>Contact Us</h1>
+  <p class="important">
+    Contact us thru below form.
+  </p>
+  <h1>complete below form:</h1>
+
+  <div>
+    {% if show_form %}
+    <form action="/contact" method="GET">
+        <p>Name: <input type="text" name="fname"></p>
+        <p>Email: <input type="text" name="email"></p>
+        <p>Description: <textarea name="description">fill me up...</textarea></p>
+        <input type="submit" name="submit">
+    </form>
+    {% else %}
+        <div><h3>thank you {{fname}} for participating.</h3></div>
+    {% endif %}
+  </div>
+{% endblock %}
